@@ -94,6 +94,9 @@
             color: #454545;
         }
     }
+    .menu {
+        display: none;
+    }
     &-blocks {
         width: 580px;
         display: flex;
@@ -483,3 +486,4 @@
         }
     }
 }
+@import 'media';
