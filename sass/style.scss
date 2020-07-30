@@ -99,6 +99,9 @@
                 font-weight: 400;
                 letter-spacing: 0.01em;
                 color: #454545;
+                &:hover {
+                    color: #fc2028;
+                }
             }
         }
         .exit {
@@ -166,6 +169,9 @@
             font-weight: 400;
             letter-spacing: 0.01em;
             color: #454545;
+            &:hover {
+                color: #fc2028;
+            }
         }
 
     }
