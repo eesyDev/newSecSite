@@ -6,20 +6,13 @@
     font-family: 'Titillium Web';
     box-sizing: border-box;
 }
-// @media (min-width: 1439px) {
-//     .promo {
-//         .vertical-line-1 {
-//             left: 500px;
-//         }
-//         .vertical-line-2 {
-//             left: 910px;
-//         }
-//         .hr-2 {
-//             width: 745px;
-//         }
-//     }
-// }
-
+button {
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 2px 2px 20px rgba(white, 1);
+    }
+}
 .container {
     width: 1140px;
     margin: 0 auto;
@@ -27,7 +20,7 @@
 .button {
     width: 94px;
     height: 40px;
-    background: linear-gradient(to left, #582c7e, #5f5fb4);
+    background: linear-gradient(to left, #5d6e64, #537762);
     border-radius: 20px;
     border: none;
     font-weight: 700;
@@ -35,22 +28,29 @@
     &-promo, &-privacy {
         width: 246px;
         height: 56px;
-        background: linear-gradient(to right, #677298, #734a81);
+        background: linear-gradient(to right, #5d6e64, #537762);
         border-radius: 28px;
+    }
+    &-privacy:hover {
+        box-shadow: 2px 2px 50px #5d6e64;
     }
 }
 
 .promo {
     height: 750px;
-    padding: 78px 0 331px;
-    background: url(../img/promo_bgd.png) center center/cover no-repeat;
+    padding: 78px 0 0;
+    background: url(../img/promo_bgd.jpg) center center/cover no-repeat;
+    &_under {
+        background: linear-gradient(to bottom, rgba(white, 0) 0%, rgba(white, 0) 40%, rgba(white, 1) 100%);
+        height: 100%;
+    }
     &-h1 {
         opacity: 0.85;
         font-size: 60px;
         margin-top: 180px;
         font-weight: 700;
         letter-spacing: 0.01em;
-        color: #454545;
+        color: #c32a2a;
         text-align: center;
     }
     &-h2 {
@@ -64,7 +64,7 @@
             font-size: 36px;
             line-height: 56px;
             font-weight: 400;
-            color: #fc2028;
+            color: #c32a2a;
         }
     }
     .header {
@@ -79,7 +79,7 @@
             letter-spacing: 0.002em;
             color: #858688;
             span {
-                color: #5b4295;
+                color: #56645c;
             }
         }
         &-right {
@@ -125,13 +125,13 @@
             left: 30px;
             height: 75px;
             opacity: 0.63;
-            background-color: #2d6af7;
+            background-color: #c32a2a;
             margin-right: 100px;
             &:after {
                 content: "";
                 height: 30px; 
                 width: 80px;
-                background-color: #2d6af7;
+                background-color: #c32a2a;
                 position: absolute; 
                 left: -25px; 
                 top: 25px;
@@ -141,9 +141,12 @@
             width: 46px;
             height: 46px;
             opacity: 0.8;
-            background-color: #5f2966;
+            background-color: #5d6e64;
             border-radius: 50%;
             padding-left: 11px;
+            &:hover {
+                box-shadow: 2px 2px 20px rgba(white, 1);
+            }
             a {
                 font-size: 27px;
                 font-weight: 400;
@@ -168,7 +171,7 @@
             line-height: 37px;
             font-weight: 400;
             letter-spacing: 0.01em;
-            color: #454545;
+            color: #848685;
             &:hover {
                 color: #fc2028;
             }
@@ -211,21 +214,6 @@
             }
         }
     }
-    .vertical-line-1 {
-        position: absolute;
-        border-left: 1px solid #b9b9b9;
-        height: 310px;
-        top: 597px;
-        left: 495px;
-        overflow: hidden;
-    }
-    .vertical-line-2 {
-        position: absolute;
-        border-left: 1px solid #b9b9b9;
-        height: 494px;
-        top: 757px;
-        left: 890px;
-    }
     .hr-1 {
         height: 1px;
         width: 131px;
@@ -258,7 +246,7 @@
         letter-spacing: 0.01em;
         color: #959393;        
         span {
-            color: #f65151;
+            color: #c32a2a;
         }
     }
     &-block {
@@ -275,6 +263,7 @@
         font-weight: 400;
         letter-spacing: 0.01em;
         color: #676767;
+        text-align: center;
     }
     &-icons {
         width: 786px;
@@ -401,11 +390,14 @@
     .donate {
         width: 166px;
         height: 56px;
-        background: linear-gradient(to right, #3ab1e1, #5e7bea);
+        background: linear-gradient(to right, #577262 , #5d6e64);
         border-radius: 28px;
         border: none;
         color: #fff;
         font-weight: 700;
+        &:hover {
+            box-shadow: 2px 2px 50px #5d6e64;
+        }
     }
 }
 
@@ -476,7 +468,7 @@
             font-size: 14px;
             font-weight: 400;
             text-align: right;
-            li:nth-child(1) {
+            div {
                 font-size: 18px;
                 line-height: 23px;
                 font-weight: 700;
@@ -485,15 +477,26 @@
                 margin-bottom: 20px;
             }
         }
+        .company, .legal, .mail{
+            display: flex;
+            flex-direction: column;
+            a {
+                text-decoration: none;
+                color: #232323;
+                font-size: 14px;
+                &:hover {
+                    color: #c32a2a;
+                }
+            }
+        }
     }
     &-bottom {
         width: 362px;
         margin-top: 108px;
-        ul {
-            list-style-type: none;
+        div {
             display: flex;
             justify-content: space-between;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 23px;
             font-weight: 400;
             letter-spacing: 0.01em;
@@ -501,6 +504,9 @@
             a {
                 color: #5c5c5c;
                 text-decoration: none;
+                &:hover {
+                    color: #c32a2a;
+                }
             }
         }
     }
